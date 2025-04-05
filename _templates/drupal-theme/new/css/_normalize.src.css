@@ -1,0 +1,41 @@
+---
+to: <%= h.src() %>/<%= h.changeCase.lower(name) %>/css/_normalize.src.css
+---
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+svg:not(:root) {
+  overflow: visible;
+}
+
+:focus-visible {
+  outline: var(--outline-size) solid var(--outline-color);
+  outline-offset: var(--outline-offset);
+}
+
+pre {
+  margin: 0;
+  white-space: normal;
+  word-break: break-all;
+}
+
+button,
+input,
+textarea,
+select {
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+a[href].is-disabled {
+  pointer-events: none;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
